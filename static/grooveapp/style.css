@@ -1,0 +1,15 @@
+.head {
+	margin: 0 auto;
+	font-family: 'Indie Flower', cursive;
+	font-size: 2em;
+	width: 350px;
+	color: #9b6e1a;
+}
+
+.head:hover {
+	cursor: pointer;
+	color: #aa0527;
+}
+h1 {
+	height: 55px;
+}
