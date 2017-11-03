@@ -13,10 +13,16 @@
 			<hr>
 	</div>
     	<h2>Homepage</h2>
-        <p>Hello {{ user.firstname }}!</p>
     <hr>
-        <span><a href="{% url 'logout' %}"> Logout</a>
+    {% if user.is_authenticated %}
+        <p>
+        Welcome, {{ user.username }}
+            <a href="{% url 'grooveapp:logout' %}">Logout</a><br>
+        </p>
+    {% else %}
+        <p>Welcome, Guest <a href="{% url 'grooveapp:login' %}">Login</a></p>
+    {% endif %}
+
 </span>
-    <hr>
     </body>
 </html>
