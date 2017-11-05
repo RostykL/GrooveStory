@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 class Posts(models.Model):
     first_author_name = models.CharField(max_length=50)
@@ -14,3 +14,8 @@ class GrStory(models.Model):
     text = models.TextField()
     release_date = models.DateField()
     num_stars = models.IntegerField()
+
+class Message(models.Model):
+    text = models.TextField(max_length=600)
+    time = models.DateField(auto_now=True)
+    author = models.ForeignKey(User)

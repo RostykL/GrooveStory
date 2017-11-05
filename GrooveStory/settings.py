@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-
+from .settingssecret import *
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -134,11 +134,7 @@ LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'home'
 
 
-SOCIAL_AUTH_FACEBOOK_KEY = '1948454112064209'  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = 'e2d476025b51682fd5169b2d72335dec'  # App Secret
-#-----------------------------------------------------------------------------
-SOCIAL_AUTH_GITHUB_KEY = '31d54a4039f3fc99ff69'
-SOCIAL_AUTH_GITHUB_SECRET = '11bcdbb6104cb311a34b0a3701ec8ab288259c2a'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 

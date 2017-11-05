@@ -21,8 +21,6 @@ from grooveapp import views as core_views
 urlpatterns = [
     url(r'^', include('grooveapp.urls', namespace='grooveapp')),
     url(r'^$', core_views.index, name='home'),
-    # url(r'^login/$', auth_views.login, name='login'),
-    # url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^admin/', admin.site.urls),
 ]

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Groove Story</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/style.css' %}" />
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	</head>
+	<body>
+    <h1>Chat</h1>
+    {% for message in messages%}
+    <div class="message">
+        <p>Message: {{message.text}}</p>
+        <p>posted by: {{message.author.username}}</p>
+        <p>time: {{message.time}}</p>
+         <hr>
+    </div>
+    {% endfor%}
+        {% if user.is_authenticated %}
+    <form action='' method='POST'>
+        {% csrf_token %}
+        <textarea name="message" rows="5" cols="30"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    {% else %}
+        <p><a href="{% url 'grooveapp:login' %}">Login</a></p>
+    {% endif %}
+
+    </body>
+</html>
