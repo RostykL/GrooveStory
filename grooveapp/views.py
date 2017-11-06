@@ -1,4 +1,4 @@
-# from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from .models import Message
 # from django.contrib.auth.decorators import login_required
@@ -19,6 +19,15 @@ def lobby(req):
         'messages': Message.objects.all(),
         'user': req.user
     })
+
+def get_messages(req):
+    return JsonResponse([
+        {
+            'author': m.author.username,
+            'text': m.text,
+            'time': m.time
+        } for m in Message.objects.all()
+    ], safe=False)
 
 
 # def home(req):

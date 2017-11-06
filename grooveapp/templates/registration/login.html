@@ -4,20 +4,38 @@
 	<head>
 		<title>Groove Story</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/style.css' %}" />
-		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/mstyle.css' %}" />
+
 	</head>
 	<body>
-        <h2>Login</h2>
-              <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Login</button>
-              </form>
-        <br>
-                <p><strong>-- OR --</strong></p>
-                <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
-                <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
-        <hr>
+        <button type="button" class="btn btn-default btn-sm" style="padding:5px; font-size:1.4em;">
+          <a href="/"><span class="glyphicon glyphicon-chevron-left"></span> Left</a>
+        </button>
+        <div class="container-fluid loginform">
+           <div class="login-text">
+                <span>- Login with -</span>
+           </div>
+
+
+           <div class="loginform-position">
+                  <form method="post" class="groove-stories-login-form">
+                   {% csrf_token %}
+                   <input type="text" placeholder="Write your name here" name="username" autofocus maxlength="254" required id="id_username" />
+                   <input type="password" placeholder="and password that can not be hacked"  name="password" required id="id_password" />
+                   <input type="submit" value="Submit" class="subBtn">
+                  </form>
+                <!--<div class="other-social-net">-->
+                <!--    <span>OR</span>-->
+                <!--</div>-->
+                <div class="social-login">
+                    <a href="/oauth/login/github/"><i class="fa fa-github-square" style="font-size:30px"></i>GitHub</a><br>
+                    <a href="/oauth/login/facebook/"><i class="fa fa-facebook-official" style="font-size:36px"></i></i>acebook</a>
+                </div>
+          </div>
+    </div>
     </body>
 </html>

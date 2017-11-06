@@ -4,27 +4,24 @@
 	<head>
 		<title>Groove Story</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/style.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/lobby.css' %}" />
 		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="{% static "grooveapp/js/script.js" %}"></script>
 	</head>
 	<body>
-    <h1>Chat</h1>
-    {% for message in messages%}
-    <div class="message">
-        <p>Message: {{message.text}}</p>
-        <p>posted by: {{message.author.username}}</p>
-        <p>time: {{message.time}}</p>
-         <hr>
-    </div>
-    {% endfor%}
+    <h1>Chat for your mom/dad</h1>
+    <div id="messages"></div>
         {% if user.is_authenticated %}
-    <form action='' method='POST'>
-        {% csrf_token %}
-        <textarea name="message" rows="5" cols="30"></textarea>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="msgs">
+        <form action='' method='POST' id='form'>
+            {% csrf_token %}
+            <textarea id="message" name="message" rows="6" cols="50" maxlength="70" class="comment" placeholder="Write something (tip: password from your credit card)"></textarea>
+        </form>
+        <button id="submit">Submit</button>
+    </div>
     {% else %}
-        <p><a href="{% url 'grooveapp:login' %}">Login</a></p>
+        <p><a href="{% url 'grooveapp:login' %}" value="(You need to login to be able to post messages)">Login</a></p>
     {% endif %}
 
     </body>

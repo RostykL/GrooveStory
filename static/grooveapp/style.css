@@ -13,3 +13,8 @@
 h1 {
 	height: 55px;
 }
+.message {
+    width:auto;
+    border:1px solid black;
+}
+
