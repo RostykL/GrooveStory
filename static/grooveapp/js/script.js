@@ -26,21 +26,25 @@ $(function(){
         });
         showMessages();
         $.ajax({
-                   type: "POST",
-                   url: '',
-                  data: $("#form").serialize(),
-                success: function(data)
-                {
-                      console.log(data, 'success')
-                }
+                type: "POST",
+                url: '',
+                data: $("#form").serialize(),
+                    success: function(data)
+                    {
+                          console.log(data, 'success')
+                    }
          });
 
     }
 
-    $('#message').keydown(function(e) {
-        if(e.ctrlKey && e.keyCode == 13) {
+    $('#message').keydown(function() {
+    if ($('#message').val().length > 0) {
+        if(e.ctrlKey && e.keyCode == 13 ) {
             addMessage()
+        } else {
+            alert('Please type smt')
         }
+
     })
     $('#submit').click(function() {
         if ($('#message').val().length > 0) {

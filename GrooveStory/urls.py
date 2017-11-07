@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^$', core_views.index, name='home'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^admin/', admin.site.urls),
+    url(r'^signup/$', core_views.signup, name='signup'),
 ]
 

@@ -4,12 +4,13 @@
 	<head>
 		<title>Groove Story</title>
 		<meta charset="utf-8">
-				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="{% static "grooveapp/js/script.js" %}"></script>
+
 	</head>
 	<body>
 	<div class="head">
@@ -19,22 +20,20 @@
     	<h2>Homepage</h2>
     <hr>
     {% if user.is_authenticated %}
-        <p>
+
         <p>Welcome,
         <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-user"></span> {{ user.username }}
+          <span class="glyphicon glyphicon-user" style="font-weight:bold"> {{ user.username }}</span>
         </button>
-        <button type="button" class="btn btn-default btn-sm">
-            <a href="{% url 'grooveapp:logout' %}">Logout</a><br>
-        </button>
+            <a href="{% url 'grooveapp:logout' %}"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash" style="font-weight:bold"> Logout</span></button><br></a>
+            <a href="{% url 'grooveapp:signup' %}"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash" style="font-weight:bold"> SignUp</span></button><br></a>
         </p>
-        </p>
+
     {% else %}
-        <p>Welcome, Guest <a href="{% url 'grooveapp:login' %}">Login</a></p>
+        <a  href="{% url 'grooveapp:login' %}"><p class="btn btn-default btn-sm">Login</p></a>
     {% endif %}
-        <button type="button" class="btn btn-default btn-sm">
-            <a href="{% url 'grooveapp:lobby' %}">Lobby</a><br>
-        </button>
+    <a href="{% url 'grooveapp:lobby' %}"><button class="btn btn-default btn-sm glyphicon glyphicon-pencil" style="font-weight:bold"> Lobby</button></a>
+
 
 
 </span>
