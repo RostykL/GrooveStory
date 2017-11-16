@@ -10,6 +10,7 @@ urlpatterns = [
         url(r'^logout/$', auth_views.logout, {'next_page': 'grooveapp:login'}, name='logout'),
         url(r'^login/$', auth_views.login, name='login'),
         url(r'^lobby/$', views.lobby, name='lobby'),
+        url(r'^profile/$', views.profile, name='profile'),
         url(r'^api/lobby_messages$', views.get_messages),
         url(r'^signup/$', core_views.signup, name='signup'),
 ]

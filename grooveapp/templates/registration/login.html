@@ -8,18 +8,19 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/mstyle.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/mtyle.css' %}" />
 
 	</head>
 	<body>
+
 	    <a href="/">
-            <button type="button" class="btn btn-default btn-sm" style="padding:5px; font-size:1.4em;">
-              <a href="/"><span class="glyphicon glyphicon-chevron-left"></span> Left
+            <button type="button" class="btn btn-default btn-sm" style="background-image: -moz-radial-gradient(center, ellipse cover, rgba(254,252,234,0.36) 0%, rgba(244,227,101,0.36) 54%, rgba(241,218,54,0.62) 73%, rgba(241,218,54,1) 100%);padding:5px; font-size:4em;">
+            <span class="glyphicon glyphicon-chevron-left"></span>GrooveStories
             </button>
         </a>
-        <div class="container-fluid loginform">
+        <div id="cont" style=" " class="container-fluid loginform">
            <div class="login-text">
-                <span>- Login with -</span>
+                <span>    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp- Login with -</span>
            </div>
 
 
@@ -34,7 +35,8 @@
                 <!--    <span>OR</span>-->
                 <!--</div>-->
                 <div class="social-login">
-                    <a href="/oauth/login/github/"><i class="fa fa-github-square" style="font-size:30px"></i>GitHub</a><br>
+                    <a id="singup" href="{% url 'grooveapp:signup' %}"><i class="fa fa-sign-in" aria-hidden="true" style="font-weight:bold; font-size:30px"></i>SignUp<br></a>
+                    <a href="/oauth/login/github/"><i class="fa fa-github-square" style="font-size:36px"></i>GitHub</a><br>
                     <a href="/oauth/login/facebook/"><i class="fa fa-facebook-official" style="font-size:36px"></i></i>acebook</a>
                 </div>
           </div>

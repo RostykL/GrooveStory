@@ -6,10 +6,14 @@ from django.contrib.auth.forms import UserCreationForm
 # from django.contrib.auth.decorators import login_required
 
 
+
 def index(req):
     return render(req, 'grooveapp/index.html', {
     		'text': 'Groove Story'
     })
+
+def profile(req):
+    return render(req, 'grooveapp/profile.html', {})
 
 def lobby(req):
     if req.method == 'POST':
@@ -18,8 +22,9 @@ def lobby(req):
         return redirect('/lobby/')
 
     return render(req, 'grooveapp/lobby.html', {
-        'messages': Message.objects.all(),
-        'user': req.user
+        'messages' : Message.objects.all(),
+        'user' : req.user,
+        # 'name' : name
     })
 
 def get_messages(req):
@@ -44,6 +49,7 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'grooveapp/signup.html', {'form': form})
+
 
 
 

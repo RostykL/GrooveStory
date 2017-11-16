@@ -19,3 +19,4 @@ class Message(models.Model):
     text = models.TextField(max_length=600)
     time = models.DateField(auto_now=True)
     author = models.ForeignKey(User)
+

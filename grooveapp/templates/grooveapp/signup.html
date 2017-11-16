@@ -11,22 +11,22 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="{% static "grooveapp/js/script.js" %}"></script>
 	</head>
-	<body>
+	<body style='text-align:center'>
          <h2>Sign up</h2>
     <form method="post">
-        {% csrf_token %}
-        {% for field in form %}
+       <ul> <p>{% csrf_token %}</p>
+        <p>{% for field in form %}</p></ul>
           <p>
-            {{ field.label_tag }}<br>
-            {{ field }}
-            {% if field.help_text %}
-              <small style="color: grey">{{ field.help_text }}</small>
-            {% endif %}
-            {% for error in field.errors %}
+           <p>{{ field.label_tag }}</p>
+            <p>{{ field }}</p>
+            <p>{% if field.help_text %}</p>
+
+            <p>{% endif %}</p>
+            <p>{% for error in field.errors %}</p>
               <p style="color: red">{{ error }}</p>
-            {% endfor %}
+            <p>{% endfor %}</p>
           </p>
-        {% endfor %}
+        <p>{% endfor %}</p>
         <button type="submit">Sign up</button>
     </form>
     </body>

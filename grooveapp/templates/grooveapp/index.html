@@ -2,37 +2,45 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Groove Story</title>
+		<title id="title">Groove Story</title>
 		<meta charset="utf-8">
 		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/homepage.css' %}" />
 		<script src="{% static "grooveapp/js/script.js" %}"></script>
 
 	</head>
-	<body>
+	<body class="body">
+	    <style>
+	        .body{
+	            background-image:"https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/16790121_406911189727342_155493432616288256_n.jpg";
+	        }
+
+
+	    </style>
 	<div class="head">
-			<h1>{{text}}</h1>
+			<h1 style="text-align:center; font-size:70px">{{text}}</h1>
 			<hr>
 	</div>
-    	<h2>Homepage</h2>
-    <hr>
-    {% if user.is_authenticated %}
+    	<h2 id="homepage" style="text-align:left">&nbsp&nbspMenu:</h2>
+    	   {% if user.is_authenticated %}
 
-        <p>Welcome,
         <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-user" style="font-weight:bold"> {{ user.username }}</span>
+          <a href="{% url 'grooveapp:profile'  %}"><span class="glyphicon glyphicon-user" style="font-weight:bold"> {{ user.username }}</span>
         </button>
-            <a href="{% url 'grooveapp:logout' %}"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash" style="font-weight:bold"> Logout</span></button><br></a>
-            <a href="{% url 'grooveapp:signup' %}"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash" style="font-weight:bold"> SignUp</span></button><br></a>
-        </p>
+            <a id="logout" href="{% url 'grooveapp:logout' %}"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-off" style="font-weight:bold"> Logout</span></button></a>
+            <a id="singup" href="{% url 'grooveapp:signup' %}"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-log-in" style="font-weight:bold"> SignUp</span></button></a>
+
 
     {% else %}
         <a  href="{% url 'grooveapp:login' %}"><p class="btn btn-default btn-sm">Login</p></a>
     {% endif %}
-    <a href="{% url 'grooveapp:lobby' %}"><button class="btn btn-default btn-sm glyphicon glyphicon-pencil" style="font-weight:bold"> Lobby</button></a>
+    <a href="{% url 'grooveapp:lobby' %}"><button class="btn btn-default btn-sm glyphicon glyphicon-pencil" style="font-weight:bold"> Chat</button></a>
+
+    <hr>
 
 
 
