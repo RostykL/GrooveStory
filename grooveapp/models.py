@@ -20,3 +20,14 @@ class Message(models.Model):
     time = models.DateField(auto_now=True)
     author = models.ForeignKey(User)
 
+class TreeCardGame(models.Model):
+    categories = models.CharField(max_length=50)
+    job = models.CharField(max_length=50)
+    place = models.CharField(max_length=50)
+    whatHappended = models.CharField(max_length=50)
+
+class MakeChat(models.Model):
+    title = models.CharField(max_length=100)
+    names = models.CharField(max_length=100)
+    lobbyid = models.CharField(max_length=100)
+

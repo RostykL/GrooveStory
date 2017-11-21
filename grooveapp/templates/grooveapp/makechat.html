@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+    transition: 0.3s ease-out;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #E6E6FA;
+    padding: 20px;
+}
+</style>
+<body>
+
+<h1>Make a chat</h1>
+<div>
+  <form action="" method='POST'>
+    {% csrf_token %}
+    <label for="title">Your chat's title</label>
+    <input type="text" id="title" name="title" placeholder="The best chat ever..">
+
+    <label for="chatname">Your chatmate's names</label>
+    <input type="text" id="chatname" name="chatname" placeholder="Rostyk, Ores..">
+
+    <input type="submit" value="Create">
+  </form>
+</div>
+</body>
+</html>

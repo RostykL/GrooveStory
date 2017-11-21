@@ -1,0 +1,28 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title id="title">Groove Story</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Nunito|Timmana|Marvel|Candal" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/gstory.css' %}" />
+	</head>
+<body class="body">
+
+<div class="container">
+
+{% for stori in story %}
+<h1>{{stori.categories}}</h1>
+
+       <!-- Main Character -->
+       <div class="wrd story-job">Main Character<br><span class="story-job">{{stori.job}}</span></div>
+       <!-- Place -->
+       <div class="wrd story-place">Place<br><span class="story-place">{{stori.place}}</span></div>
+       <!-- What happened -->
+       <div class="wrd story-wtf">What happened<br><span class="story-wtf">{{stori.whatHappended}}</span></div><!-- happened -->
+{% endfor %}
+</div>
+
+</body>
+</html>

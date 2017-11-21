@@ -7,20 +7,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/mtyle.css' %}" />
-
+		<link rel="stylesheet" type="text/css" href="{% static '/grooveapp/smtyle.css' %}" />
+		<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<style>
+body{font-family: 'Exo 2', sans-serif;}
+</style>
 	</head>
+
 	<body>
 
-	    <a href="/">
-            <button type="button" class="btn btn-default btn-sm" style="background-image: -moz-radial-gradient(center, ellipse cover, rgba(254,252,234,0.36) 0%, rgba(244,227,101,0.36) 54%, rgba(241,218,54,0.62) 73%, rgba(241,218,54,1) 100%);padding:5px; font-size:4em;">
-            <span class="glyphicon glyphicon-chevron-left"></span>GrooveStories
+	    <a href="/" style='width:100%'>
+            <button type="button" class="btn btn-default btn-sm" style="font-size:4em;">
+            GrooveStories
             </button>
         </a>
         <div id="cont" style=" " class="container-fluid loginform">
            <div class="login-text">
-                <span>    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp- Login with -</span>
+                <span style='font-size:140px;font-family: 'Exo 2', sans-serif;'>   &nbspLogin</span>
            </div>
 
 
@@ -34,12 +39,19 @@
                 <!--<div class="other-social-net">-->
                 <!--    <span>OR</span>-->
                 <!--</div>-->
-                <div class="social-login">
-                    <a id="singup" href="{% url 'grooveapp:signup' %}"><i class="fa fa-sign-in" aria-hidden="true" style="font-weight:bold; font-size:30px"></i>SignUp<br></a>
+                <div id="wi" class="social-login"style='background-color:white; '>
+                    <a id="singup" href="{% url 'grooveapp:signup' %}"><i class="fa fa-sign-in" aria-hidden="true" style="font-weight:bold; font-size:30px;margin-top:14px"></i>SignUp<br></a>
+                    <hr>
                     <a href="/oauth/login/github/"><i class="fa fa-github-square" style="font-size:36px"></i>GitHub</a><br>
+                    <hr>
                     <a href="/oauth/login/facebook/"><i class="fa fa-facebook-official" style="font-size:36px"></i></i>acebook</a>
+                    <hr>
                 </div>
           </div>
     </div>
     </body>
+    <script>
+        var width = screen.width
+        document.getElementById("wi").style.width=width
+    </script>
 </html>

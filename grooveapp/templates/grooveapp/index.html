@@ -15,6 +15,18 @@
 	</head>
 	<body class="body">
 	    <style>
+	    body{
+	        background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFRUXGBgVFRUVFRUVFRUVFRcYGBUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAABAgMABAf/xAAxEAACAAIJAwMEAwADAQAAAAAAAQIxAxEhQXGBscHwUZHRIjJhBHKh4RKCwkKy0mL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A8ZV3L2ED8bjgCDczDABgK5GUxkrELLuBWjZo1asNwQKpj0k+dQALCrXy4oCGb5cgD1DBJGhvDRKxALFLuFTYKRVLLRjVWgCrXZj1bAe70ZRS7ATSteHkek52YYZvDyGKb5cwIVWPF7iMtAlU8WJHDfiAymNTQ2YtaCpWplKWSAlUTjVqzLKQkU1y8DXiQX4+CqmTgUwA78RFcVjXMiSuYBd/LwIPPyGABHcGIPQ0QE+vOorHU2K0Aa+ZlKiSkXgYEX43GF/W44GgNUGAFwCqQYkZSGiu5eAz2Gd2G5krQxXYboDAgnz4HqFg9z5cgGgQaBWBgvG+nkBOlhsr+Nxopo1L7cnqNFDagEuzehVQ2CNavRl0pATS9Tw8jRw28+RkrclqxoobXjswOWFTz3BFDZX8PcrAp57gj9vfcAQ3Gq9NXz5KfxkaNWL7gJMnFNFv42dtycU0BqrRYFaylVotHNgLFD+GSXtReK/EjV6UBuvL0CGQXfkaFWAK1IMSCzRbAScwNahczdQBDILYIZDMBR0IOgMnqHqZK3MDvA13YKnmtTOSD5WoFYECOawGot2akdqw3AMIkM3y5FFzuI16ny5AUhUw0KsXLwVWvEp9O7EAsS9LzK/xFjXpyepWBWvnQCES12ZejXXlokW+zLJATdjeH/oZq3toNSw1t4LesNLDa8NgIQQz/sI1Zk9y0Htixe4rXpye4DKHYX6hWL7isKtyW5vqrsQOZE416ly86HIjTw2rl4Cqaw8iwKeOw7htWHkWhc8VoBqtScCsWBVX4k6O7ABI1M0IaS/AyAWLnYDuGjUhWpAK1b23EHU3zqKgND51HcIkPkqgIKZWEmufkdANDv5M1MFHuF3gKlYN5WoHLIKmsdwKo0c1gaBhjUsNwGh8ip2vlyGFgXqfLgLKGeI1BDYudQQ34j0UlzqBol6HnqO1a+dCbdlWJaF2vACMS12Z1wTINa7M6KtNwBNv7d4hqSC3LyKofW/tWsRWknzowOSGGeL1BVZ30KQqzN6sSKXfdAPVohPqJLEqnbz4BTqzNc/AEqtiVK/Us9S7RzUi9Sz2AZw6eSUMNrxWhZzyJq/FaIAKby3JQyQ0TniLC5ATjvGRo7+XhUkBonahWpGimuXGiuAk1aALv51Fd4BW7GTFT5mMAn63Kkv1uUAMAbmCjD1AEKsBJ5oykholtqA9GqmPSKWG6MpjUrlhugCgUXufLggovc8tALUaniP9MpZi0SH+nVmbAnSKpN/FmTLJP+T+RKaF/wAa7mn3TL9MPICxKWL0Z0QSyX/Yhdm9GdClluBofc8F/oaJWvlzBAvU/tWsQ8cNT76MDmoYa1F8NtfnyRpoZvFflsvAvdi/zWLSKuGu60AVW1/Hgamh9K+5aDKS50DTP0rHWsCCkRpPcsy/NTnpfdDnsAavUySVrxWhaJeolVbFloBOmhtwexJShfwXpE3b0dpKH2oBYr+Xhh5+TRX8vNDIAO4EVxuho1ICdVrEiQ0U2K7wArsxxYZZjAJ+tWUJ386lEA0EzXAgeoeoAXtGjuy2Bd2DfnuBVK0NIrcnqgwIDmsGA9W4KH3dtAwiwOqLnRAdFFeU+mdhKjvKUHtyeoBpn6KsSrhqZGL2vM6YVa89AJOWb0Z0wqxHLEpfc9GdVG5cvAaCeS/0UjmyVdTeH/oo3b20AhRKyLF7iRv0d9ylFJ4x7k4vbl5Adw2Q4bgpobFj+9yiX4S2ZKnVn9kBOqztuc9LNZ7HSjmpp99gHi9zw2JQTi5cPXW8hIJvFf8AUBYorHkQhXpRVzYtHJYeQJxXmUgUqmFABmiuwNFNcuA7gJqYtcxr+wr8gZKzMeFCw+QsBFPsPCTQ6YDQTzM7zQbmiQGuQ7uy1JXDrxqB0UO5q7YcBIGBu1YbgWXkVquLPZGh8mgdvOiAtDePQP0rMRKeI1BJZ7gPH7X81nRRzeOqOSL2vPUvXPlwGimvuejOlM4m9dmdUDAaktbwX+h6X3ZLRk07Wv8A5X+h6afbRgRova38vVgft76RCwyeL1Frsqx0A6YHbktBfqHZ/dCp6Lcl9RFZ/ZAO3sc/1N2G5WvYjTRervsBmrVgTo37sVoUiWhKCbxWgC9WLRXYbhc8/IkMlgAKW8yFjvCgNHcLErEM3IEckBK9gV5mrWKAy8hjF/YYgFV3L2OJ+tygGotwtmg3MArkMnbzqZKxAVjzQF6J2mjVqw3Eo7GUpZrDdAGsWj9z5ch7hYPc+XIC6cx6J2LnUlDJjUEliA8T9KzKQxWs56R1LKzJvyUT9TApd/bZlq9iDdmb0ZaF2dtwND7n9q1ZWmi20ZKD3PBbjRTfLmBNOxv5i1ZKKKxZ7/opRqtRW3sjS9fh61gdKitB9QrMWn+CSfqTK08XpWQE4noufk56X3LPVF07CNI/UuXoBnFbkSgc8dkPXbluRg/5cuALc8VqThcsNh4+diSftfwAXN4bmRnflqaABHNcuGicgO40QE3z8iNzKJWsnEgDXzMf+JIvABF+NxxP1uOAaMwYAMAJ2BiApDRuXLwKPYeJyw3JqY0V2G6AZMEHufLkH9go/c+XIClHeP8ATuxE4Lx/pnYBqZWZblInasCVLF6avh6jRTQFK7M3oVTs7HNXZm9GXhcgHhfqeHkaOfOjJQu3LdjRu147AJBFY18vViUjs+GnuCBzz3NHF6e+4FYXZCZxenPyIrgxuz+wAbmRpHaudB7u25KN2oBnMSCcXLhq7RaKb50AMe5Fe1FonPEhV6UAeuWqNAwO/I0MgA7jRhiBFsAjmK9wuYK5gCFWMb+QqkMwF8DoQZAGF6m6gStzN1A13Ya/PcWuxB8oC0AI3asA0fkEc1gA8LEhdr5chufkRq18uQFobw0LsXLxFNjUEVgBi9rwZRzIxP099R4Xa+dANE9dmWo3zM5onrsyyYDfyteC/wBDuK3toQpJ5LcaOeWwGhv/ALbiN2ZPc0EVjxYrdnPkDoT2Fp5L7hYXb23D9RdiAqiJxe5D1k6Wa5eAyduQsDnjsa9YeQUTteK0AbyThkh05k4LsABHeaFmjvwMgNFzsBuRorhWpABz7CsZTYqAMPkdwiQ+SqAgpjoVXc6hAZTz8gd4INwtgLcN+tRWGu1cvAqmCN2rAELNFcBRPcCdvPgFYsM+dALdTUUlnuBOeJoHYgGifp76hbtfOhJxWVDqK1gLE9dmXhZB77MrWAzduW8QaQl/yeG7KRxW8+QJwyeLBXYBbvUVxWc+QLp6IWmisWJlFaCklmgDXsLSO1cvNWTjmudAKPbyLBfitA16ATnitACr1y8nC7EFxTxFhcgBGwpgiMrgGicgO4VzQW5AIBBd/OoACt2OohE+ZjpAJzUdgMBqMDCYBXLIK3CYAwDR3YGMAXIWCfOhjAP1xGo5IxgE5qPe8AmAV+dClyw3MYAKeXkeOfOhjASUsxXJ8vMYCl/PgNJLNGMAqJOa50MYCkU+fIkF+KMYARTF6GMBoudwwyMYBXcNEYwE+pjGA3PyOAwH/9k=);
+	    }
+	    #a{
+	        background-image:linear-gradient(lightblue,white,azure,yellow,yellow,white,yellow,yellow,azure,white,lightblue);
+	        height:30px;
+	        width:40px;
+	        padding-left:10px;
+	        padding-right:10px;
+	        font-size:30px;
+	    }
+
 	        .body{
 	            background-image:"https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/16790121_406911189727342_155493432616288256_n.jpg";
 	        }
@@ -28,22 +40,24 @@
     	<h2 id="homepage" style="text-align:left">&nbsp&nbspMenu:</h2>
     	   {% if user.is_authenticated %}
 
-        <button type="button" class="btn btn-default btn-sm">
-          <a href="{% url 'grooveapp:profile'  %}"><span class="glyphicon glyphicon-user" style="font-weight:bold"> {{ user.username }}</span>
-        </button>
-            <a id="logout" href="{% url 'grooveapp:logout' %}"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-off" style="font-weight:bold"> Logout</span></button></a>
-            <a id="singup" href="{% url 'grooveapp:signup' %}"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-log-in" style="font-weight:bold"> SignUp</span></button></a>
+
+          <a id="a" href="{% url 'grooveapp:profile'  %}">user: {{ user.username }}</a>
+
+            <a id="a" id="logout" href="{% url 'grooveapp:logout' %}">Logout</a>
+            <a id="a" id="singup" href="{% url 'grooveapp:signup' %}"> SignUp</a>
 
 
     {% else %}
-        <a  href="{% url 'grooveapp:login' %}"><p class="btn btn-default btn-sm">Login</p></a>
+        <a id="a"  href="{% url 'grooveapp:login' %}">Login</a>
     {% endif %}
-    <a href="{% url 'grooveapp:lobby' %}"><button class="btn btn-default btn-sm glyphicon glyphicon-pencil" style="font-weight:bold"> Chat</button></a>
+    <a id="a" href="{% url 'grooveapp:lobby' name=1 %}">Chat</a>
+    <a id="a" href="{% url 'grooveapp:infostories' %}"> Stories</a>
+    <a id="a" href="{% url 'grooveapp:makechat' %}"> Create a chat</a>
 
     <hr>
 
 
 
 </span>
-    </body>
+</body>
 </html>
